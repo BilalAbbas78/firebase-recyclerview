@@ -7,8 +7,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.SearchView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Log.i("ABCDEF", "Create");
 
 
         recylerviewbtn = findViewById(R.id.recyclerviewbtn);
@@ -26,22 +28,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Log.i("ABCDEF", "Btn click");
-
-//                Intent i = new Intent(getApplicationContext(),userlist.class);
-                Log.i("ABCDEF", "Btn 1");
-
-//                startActivity(i);
-
                 startActivity(new Intent(MainActivity.this, userlist.class));
-                Log.i("ABCDEF", "Btn 2");
                 finish();
-                Log.i("ABCDEF", "Btn 3");
 
 
             }
         });
 
     }
+
+
+
+
 }
 
