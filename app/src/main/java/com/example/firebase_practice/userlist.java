@@ -53,19 +53,11 @@ public class userlist extends AppCompatActivity {
         database.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-
                     User user = dataSnapshot.getValue(User.class);
-
                     list.add(user);
-
-
-
-
                 }
                 myAdapter.notifyDataSetChanged();
-
             }
 
             @Override
